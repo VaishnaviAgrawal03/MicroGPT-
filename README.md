@@ -4,8 +4,6 @@
 
 *A tiny, readable GPT-style language model you can train and tinker with in an afternoon.*
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![TensorFlow](https://img.shields.io/badge/Framework-TensorFlow-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 ---
 
 ## Table of Contents
