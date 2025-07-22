@@ -18,7 +18,7 @@
 * [Results & Samples](#results--samples)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [License](#license)
+
 
 ---
 
