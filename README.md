@@ -37,43 +37,68 @@
 ## Project Structure
 
 microgpt/
+
 ├── microgpt.py               # Core model: embeddings, TransformerBlock, forward pass
+
 ├── train.py                  # Training loop & logging hooks
+
 ├── sample.py                 # Text generation / inference script
+
 ├── utils/
+
 │   ├── tokenizer.py          # Simple tokenizer or BPE/WordPiece wrapper
+
 │   ├── callbacks.py          # TextGenerator, custom callbacks
+
 │   └── data_utils.py         # Helpers for loading/preprocessing
+
 ├── data/
+
 │   ├── raw/                  # Raw corpus (e.g., winemag-data-130k-v2.json)
+
 │   └── processed/            # Tokenized/serialized datasets
+
 ├── configs/
+
 │   └── microgpt.yaml         # Hyperparameters & paths
+
 ├── checkpoints/              # Saved weights & logs
+
 └── README.md
 
 ## Quickstart
 
-# 1. Create & activate a virtual env
+ 1. Create & activate a virtual env
+    
 python -m venv .venv
+
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
-# 2. Install requirements
+ 2. Install requirements
+    
 pip install -r requirements.txt
 
-# 3. Prep data (example: tokenize WineMag reviews)
+ 3. Prep data (example: tokenize WineMag reviews)
+    
 python utils/tokenizer.py \
+
   --input data/raw/winemag-data-130k-v2.json \
+  
   --out   data/processed/winemag_tokens.pkl
 
 
 ## Text Generation
 
 python sample.py \
+
   --checkpoint checkpoints/best.ckpt \
+  
   --prompt "wine review : italy" \
+  
   --max_tokens 80 \
+  
   --temperature 0.8 \
+  
   --top_k 50
 `
 
